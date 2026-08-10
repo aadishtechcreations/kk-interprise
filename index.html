@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>KK Enterprise | Ankleshwar, Gujarat</title>
 
   <meta
     name="description"
-    content="KK Enterprise - Services, products and customer support in Ankleshwar, Gujarat."
-  />
+    content="KK Enterprise - Professional services in Ankleshwar, Gujarat. Call or WhatsApp to book a service."
+  >
 
   <style>
     * {
@@ -18,70 +18,87 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f7fb;
-      color: #1f2937;
+      color: #172033;
       line-height: 1.6;
     }
+
+    /* ================= HEADER ================= */
 
     header {
       background: #111827;
       color: white;
-      padding: 18px 7%;
+      padding: 18px 6%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     }
 
     .logo {
       font-size: 25px;
-      font-weight: bold;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
+      font-weight: 600;
     }
 
     nav a:hover {
       opacity: 0.7;
     }
 
+    /* ================= HERO ================= */
+
     .hero {
-      min-height: 560px;
+      min-height: 600px;
       display: flex;
       align-items: center;
-      padding: 70px 7%;
-      background: linear-gradient(135deg, #e8eefc, #ffffff);
+      padding: 80px 7%;
+      background: linear-gradient(135deg, #eef2ff, #ffffff);
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      margin-bottom: 15px;
+      font-size: clamp(45px, 8vw, 80px);
+      line-height: 1.05;
+      margin-bottom: 20px;
       color: #111827;
     }
 
     .hero h2 {
-      font-size: 25px;
+      font-size: 27px;
       margin-bottom: 15px;
       color: #374151;
     }
 
     .hero p {
       font-size: 18px;
-      color: #6b7280;
+      color: #5f6878;
       margin-bottom: 30px;
+      max-width: 700px;
     }
+
+    /* ================= BUTTONS ================= */
 
     .buttons {
       display: flex;
@@ -91,11 +108,19 @@
 
     .btn {
       display: inline-block;
-      padding: 13px 22px;
+      padding: 14px 24px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
       transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     .btn-primary {
@@ -108,61 +133,163 @@
       color: white;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
+    .btn-light {
+      background: white;
+      color: #111827;
     }
 
+    /* ================= SECTIONS ================= */
+
     section {
-      padding: 70px 7%;
+      padding: 80px 7%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-      font-size: 35px;
-      margin-bottom: 8px;
+      font-size: 38px;
+      margin-bottom: 10px;
     }
 
     .section-title p {
       color: #6b7280;
     }
 
-    .cards {
-      max-width: 1100px;
+    /* ================= SERVICES ================= */
+
+    .service-search {
+      max-width: 600px;
+      margin: 0 auto 35px;
+    }
+
+    .service-search input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+    }
+
+    .service-search input:focus {
+      border-color: #111827;
+    }
+
+    .service-grid {
+      max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+      );
       gap: 20px;
     }
 
-    .card {
+    .service-card {
       background: white;
-      padding: 28px;
+      padding: 30px 25px;
       border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
       transition: 0.2s;
     }
 
-    .card:hover {
+    .service-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .icon {
-      font-size: 35px;
-      margin-bottom: 15px;
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
     }
 
-    .card h3 {
+    .service-card h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .service-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .small-btn {
+      padding: 9px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .call-btn {
+      background: #111827;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: white;
+    }
+
+    /* ================= HOW IT WORKS ================= */
+
+    .how-it-works {
+      background: white;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .step h3 {
       margin-bottom: 8px;
     }
 
-    .card p {
+    .step p {
       color: #6b7280;
     }
+
+    /* ================= CONTACT ================= */
 
     .contact {
       background: #111827;
@@ -170,58 +297,91 @@
     }
 
     .contact-container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
     }
 
     .contact-container h2 {
-      font-size: 35px;
-      margin-bottom: 15px;
+      font-size: 38px;
+      margin-bottom: 12px;
     }
 
-    .contact-container p {
+    .contact-container > p {
       color: #d1d5db;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
-    .contact-info {
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
       gap: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .contact-box {
-      padding: 20px;
       background: #1f2937;
-      border-radius: 12px;
+      padding: 25px;
+      border-radius: 14px;
     }
+
+    .contact-box .icon {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      color: #d1d5db;
+      margin-top: 5px;
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #030712;
       color: #9ca3af;
       text-align: center;
       padding: 25px;
-      font-size: 14px;
     }
 
+    /* ================= MOBILE ================= */
+
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
         gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       nav a {
-        margin: 0 7px;
+        font-size: 14px;
       }
 
       .hero {
-        min-height: 500px;
+        min-height: 520px;
+        padding: 60px 6%;
       }
 
       section {
-        padding: 50px 5%;
+        padding: 60px 5%;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+        width: 100%;
       }
     }
   </style>
@@ -229,205 +389,527 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">KK Enterprise</div>
+<!-- ================= HEADER ================= -->
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+
+  <div class="logo">
+    KK Enterprise
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
 
 
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <div class="hero-content">
+<!-- ================= HOME ================= -->
 
-      <h1>KK Enterprise</h1>
+<section class="hero" id="home">
 
-      <h2>Quality • Service • Trust</h2>
+  <div class="hero-content">
 
-      <p>
-        Welcome to KK Enterprise.
-        Explore our services and products and contact us directly
-        for more information.
-      </p>
+    <h1>KK Enterprise</h1>
 
-      <div class="buttons">
+    <h2>Quality • Service • Trust</h2>
 
-        <a
-          class="btn btn-primary"
-          href="tel:+919427582888"
-        >
-          📞 Call Us
-        </a>
+    <p>
+      Welcome to KK Enterprise.
+      Explore our services and contact us directly
+      to ask questions or book a service.
+    </p>
 
-        <a
-          class="btn btn-whatsapp"
-          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise"
-          target="_blank"
-        >
-          💬 WhatsApp
-        </a>
+    <div class="buttons">
 
-      </div>
+      <a
+        class="btn btn-primary"
+        href="tel:+919427582888"
+      >
+        📞 Call to Book
+      </a>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20would%20like%20to%20book%20a%20service."
+        target="_blank"
+      >
+        💬 WhatsApp to Book
+      </a>
+
+      <a
+        class="btn btn-primary"
+        href="#services"
+      >
+        View All Services
+      </a>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+  <div class="section-title">
+
+    <h2>All Services</h2>
+
+    <p>
+      Find the service you need and contact KK Enterprise to book.
+    </p>
+
+  </div>
+
+
+  <!-- SEARCH -->
+
+  <div class="service-search">
+
+    <input
+      type="text"
+      id="serviceSearch"
+      placeholder="🔎 Search for a service..."
+      onkeyup="searchServices()"
+    >
+
+  </div>
 
 
   <!-- SERVICES -->
-  <section id="services">
 
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>Services provided by KK Enterprise</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🛠️</div>
-        <h3>Service 1</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚙️</div>
-        <h3>Service 2</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📋</div>
-        <h3>Service 3</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⭐</div>
-        <h3>Service 4</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔧</div>
-        <h3>Service 5</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🤝</div>
-        <h3>Service 6</h3>
-        <p>Service information will be added here.</p>
-      </div>
-
-    </div>
-  </section>
+  <div class="service-grid" id="serviceGrid">
 
 
-  <!-- PRODUCTS -->
-  <section id="products">
+    <div class="service-card">
 
-    <div class="section-title">
-      <h2>Products</h2>
-      <p>Products available from KK Enterprise</p>
-    </div>
+      <div class="service-icon">🛠️</div>
 
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>Product 1</h3>
-        <p>Product information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>Product 2</h3>
-        <p>Product information will be added here.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>Product 3</h3>
-        <p>Product information will be added here.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-
-    <div class="contact-container">
-
-      <h2>Contact KK Enterprise</h2>
+      <h3>Business Services</h3>
 
       <p>
-        We're ready to help. Contact us by phone or WhatsApp.
+        Professional business services from KK Enterprise.
       </p>
 
-      <div class="contact-info">
-
-        <div class="contact-box">
-          📍
-          <br />
-          <strong>Location</strong>
-          <br />
-          B3 St, Ankleshwar, Gujarat, India
-        </div>
-
-        <div class="contact-box">
-          📞
-          <br />
-          <strong>Phone</strong>
-          <br />
-          +91 9427582888
-        </div>
-
-        <div class="contact-box">
-          💬
-          <br />
-          <strong>WhatsApp</strong>
-          <br />
-          +91 9427582888
-        </div>
-
-      </div>
-
-      <div class="buttons">
+      <div class="service-buttons">
 
         <a
-          class="btn btn-primary"
+          class="small-btn call-btn"
           href="tel:+919427582888"
         >
-          Call KK Enterprise
+          📞 Call to Book
         </a>
 
         <a
-          class="btn btn-whatsapp"
-          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise"
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20book%20Business%20Services."
           target="_blank"
         >
-          WhatsApp Us
+          WhatsApp
         </a>
 
       </div>
 
     </div>
 
-  </section>
+
+    <div class="service-card">
+
+      <div class="service-icon">🔧</div>
+
+      <h3>Technical Services</h3>
+
+      <p>
+        Technical services and customer support.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Book
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20book%20Technical%20Services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
 
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 KK Enterprise. All rights reserved.
-  </footer>
+    <div class="service-card">
+
+      <div class="service-icon">📋</div>
+
+      <h3>Professional Services</h3>
+
+      <p>
+        Professional assistance based on your requirements.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Book
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20book%20Professional%20Services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">🤝</div>
+
+      <h3>Customer Services</h3>
+
+      <p>
+        Customer assistance and support.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Book
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20book%20Customer%20Services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">🚚</div>
+
+      <h3>Delivery Services</h3>
+
+      <p>
+        Delivery support where available.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Book
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20ask%20about%20Delivery%20Services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">💼</div>
+
+      <h3>Enterprise Services</h3>
+
+      <p>
+        Services for businesses and organizations.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Book
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20want%20to%20ask%20about%20Enterprise%20Services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">⭐</div>
+
+      <h3>Other Services</h3>
+
+      <p>
+        Ask us about any other service you require.
+      </p>
+
+      <div class="service-buttons">
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+919427582888"
+        >
+          📞 Call to Ask
+        </a>
+
+        <a
+          class="small-btn whatsapp-btn"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise%2C%20I%20would%20like%20to%20ask%20about%20your%20other%20services."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-it-works" id="how">
+
+  <div class="section-title">
+
+    <h2>How It Works</h2>
+
+    <p>
+      Booking a service is simple.
+    </p>
+
+  </div>
+
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <h3>Choose a Service</h3>
+
+      <p>
+        Find the service you need.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <h3>Call or WhatsApp</h3>
+
+      <p>
+        Contact KK Enterprise directly.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <h3>Confirm Your Booking</h3>
+
+      <p>
+        Discuss the details and confirm your service.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="contact-container">
+
+    <h2>Contact KK Enterprise</h2>
+
+    <p>
+      Have a question or want to book a service?
+      Contact us directly.
+    </p>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-box">
+
+        <div class="icon">📍</div>
+
+        <strong>Location</strong>
+
+        <p>
+          B3 St,<br>
+          Ankleshwar,<br>
+          Gujarat, India
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <div class="icon">📞</div>
+
+        <strong>Phone</strong>
+
+        <p>
+          +91 9427582888
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <div class="icon">💬</div>
+
+        <strong>WhatsApp</strong>
+
+        <p>
+          +91 9427582888
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      class="buttons"
+      style="justify-content:center;"
+    >
+
+      <a
+        class="btn btn-light"
+        href="tel:+919427582888"
+      >
+        📞 Call KK Enterprise
+      </a>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise"
+        target="_blank"
+      >
+        💬 WhatsApp Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  © 2026 KK Enterprise.
+  All rights reserved.
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function searchServices() {
+
+  const input =
+    document.getElementById("serviceSearch");
+
+  const search =
+    input.value.toLowerCase();
+
+  const cards =
+    document.querySelectorAll(".service-card");
+
+  cards.forEach(function(card) {
+
+    const text =
+      card.innerText.toLowerCase();
+
+    if (text.includes(search)) {
+
+      card.style.display = "";
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+</script>
 
 </body>
 </html>
