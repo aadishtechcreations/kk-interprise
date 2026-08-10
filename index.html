@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>KK Enterprise | Ankleshwar, Gujarat</title>
+
+  <meta
+    name="description"
+    content="KK Enterprise - Services, products and customer support in Ankleshwar, Gujarat."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background: linear-gradient(135deg, #e8eefc, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #374151;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .cards {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    .contact {
+      background: #111827;
+      color: white;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-container p {
+      color: #d1d5db;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .contact-box {
+      padding: 20px;
+      background: #1f2937;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #030712;
+      color: #9ca3af;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">KK Enterprise</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>KK Enterprise</h1>
+
+      <h2>Quality • Service • Trust</h2>
+
+      <p>
+        Welcome to KK Enterprise.
+        Explore our services and products and contact us directly
+        for more information.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="tel:+919427582888"
+        >
+          📞 Call Us
+        </a>
+
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise"
+          target="_blank"
+        >
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Services provided by KK Enterprise</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>Service 1</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Service 2</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Service 3</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Service 4</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>Service 5</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>Service 6</h3>
+        <p>Service information will be added here.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section id="products">
+
+    <div class="section-title">
+      <h2>Products</h2>
+      <p>Products available from KK Enterprise</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Product 1</h3>
+        <p>Product information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Product 2</h3>
+        <p>Product information will be added here.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Product 3</h3>
+        <p>Product information will be added here.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="contact-container">
+
+      <h2>Contact KK Enterprise</h2>
+
+      <p>
+        We're ready to help. Contact us by phone or WhatsApp.
+      </p>
+
+      <div class="contact-info">
+
+        <div class="contact-box">
+          📍
+          <br />
+          <strong>Location</strong>
+          <br />
+          B3 St, Ankleshwar, Gujarat, India
+        </div>
+
+        <div class="contact-box">
+          📞
+          <br />
+          <strong>Phone</strong>
+          <br />
+          +91 9427582888
+        </div>
+
+        <div class="contact-box">
+          💬
+          <br />
+          <strong>WhatsApp</strong>
+          <br />
+          +91 9427582888
+        </div>
+
+      </div>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="tel:+919427582888"
+        >
+          Call KK Enterprise
+        </a>
+
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/919427582888?text=Hello%20KK%20Enterprise"
+          target="_blank"
+        >
+          WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 KK Enterprise. All rights reserved.
+  </footer>
+
+</body>
+</html>
