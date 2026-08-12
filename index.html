@@ -8,14 +8,14 @@
 
   <meta
     name="description"
-    content="કે.કે. એન્ટરપ્રાઇઝ - અંકલેશ્વર, ગુજરાતમાં વિવિધ સેવાઓ. સેવા બુક કરવા માટે ફોન અથવા WhatsApp કરો."
+    content="કે.કે. એન્ટરપ્રાઇઝ - અંકલેશ્વર, ગુજરાતમાં વિવિધ સેવાઓ. સેવા બુક કરવા માટે અમારો સંપર્ક કરો."
   >
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -23,14 +23,20 @@
     }
 
     body {
-      font-family: Arial, "Noto Sans Gujarati", sans-serif;
+      font-family:
+        "Noto Sans Gujarati",
+        "Nirmala UI",
+        Arial,
+        sans-serif;
       background: #f5f7fb;
       color: #172033;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
+    /* ================= HEADER ================= */
+
     header {
-      background: #111827;
+      background: #101827;
       color: white;
       padding: 18px 6%;
       display: flex;
@@ -39,60 +45,71 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+      box-shadow: 0 4px 18px rgba(0,0,0,.15);
     }
 
     .logo {
-      font-size: 25px;
-      font-weight: 800;
+      font-size: 26px;
+      font-weight: 900;
     }
 
     nav {
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
+      transition: .2s;
     }
 
     nav a:hover {
       opacity: .7;
     }
 
+    /* ================= HERO ================= */
+
     .hero {
-      min-height: 600px;
+      min-height: 650px;
       display: flex;
       align-items: center;
-      padding: 80px 7%;
-      background: linear-gradient(135deg, #eef2ff, #ffffff);
+      padding: 90px 7%;
+      background:
+        linear-gradient(
+          135deg,
+          #e9efff 0%,
+          #ffffff 100%
+        );
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 8vw, 80px);
-      line-height: 1.1;
-      margin-bottom: 20px;
-      color: #111827;
+      font-size: clamp(45px, 8vw, 82px);
+      line-height: 1.15;
+      color: #101827;
+      margin-bottom: 15px;
+      font-weight: 900;
     }
 
     .hero h2 {
-      font-size: 27px;
-      margin-bottom: 15px;
-      color: #374151;
+      font-size: 29px;
+      margin-bottom: 18px;
+      color: #303b50;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #5f6878;
+      max-width: 720px;
+      font-size: 19px;
+      color: #5d687a;
       margin-bottom: 30px;
-      max-width: 700px;
     }
+
+    /* ================= BUTTONS ================= */
 
     .buttons {
       display: flex;
@@ -100,155 +117,155 @@
       gap: 12px;
     }
 
-    .btn {
+    .button {
       display: inline-block;
-      padding: 14px 24px;
-      border-radius: 10px;
+      padding: 14px 23px;
+      border-radius: 11px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 800;
       transition: .2s;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
+      text-align: center;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: .9;
+    .button:hover {
+      transform: translateY(-3px);
     }
 
-    .btn-primary {
-      background: #111827;
+    .dark-button {
+      background: #101827;
       color: white;
     }
 
-    .btn-whatsapp {
-      background: #25d366;
+    .green-button {
+      background: #20c965;
       color: white;
     }
 
-    .btn-light {
-      background: white;
-      color: #111827;
-    }
+    /* ================= GENERAL ================= */
 
     section {
-      padding: 80px 7%;
+      padding: 85px 7%;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
       margin-bottom: 45px;
     }
 
-    .section-title h2 {
-      font-size: 38px;
+    .section-heading h2 {
+      font-size: 40px;
       margin-bottom: 10px;
+      font-weight: 900;
     }
 
-    .section-title p {
+    .section-heading p {
       color: #6b7280;
+      font-size: 17px;
     }
 
-    .service-search {
-      max-width: 600px;
-      margin: 0 auto 35px;
+    /* ================= SERVICES ================= */
+
+    .search-area {
+      max-width: 650px;
+      margin: 0 auto 40px;
     }
 
-    .service-search input {
+    .search-area input {
       width: 100%;
-      padding: 16px 20px;
+      padding: 17px 20px;
       border: 1px solid #d1d5db;
-      border-radius: 12px;
-      font-size: 16px;
-      outline: none;
+      border-radius: 13px;
       background: white;
+      font-size: 16px;
       font-family: inherit;
+      outline: none;
     }
 
-    .service-search input:focus {
-      border-color: #111827;
+    .search-area input:focus {
+      border-color: #101827;
+      box-shadow: 0 0 0 3px rgba(16,24,39,.08);
     }
 
-    .service-grid {
-      max-width: 1200px;
+    .services-grid {
+      max-width: 1250px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(250px, 1fr)
-      );
-      gap: 20px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(255px, 1fr));
+      gap: 22px;
     }
 
-    .service-card {
+    .service {
       background: white;
-      padding: 30px 25px;
-      border-radius: 16px;
+      border-radius: 18px;
+      padding: 32px 25px;
       text-align: center;
-      box-shadow: 0 5px 25px rgba(0,0,0,.06);
-      transition: .2s;
+      box-shadow:
+        0 6px 25px rgba(0,0,0,.06);
+      transition: .25s;
     }
 
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    .service:hover {
+      transform: translateY(-7px);
+      box-shadow:
+        0 15px 35px rgba(0,0,0,.1);
     }
 
     .service-icon {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 45px;
+      margin-bottom: 10px;
     }
 
-    .service-card h3 {
+    .service h3 {
+      font-size: 21px;
       margin-bottom: 8px;
-      font-size: 20px;
     }
 
-    .service-card p {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 18px;
+    .service p {
+      color: #697386;
+      font-size: 15px;
+      min-height: 55px;
+      margin-bottom: 20px;
     }
 
     .service-buttons {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
-    .small-btn {
-      padding: 9px 14px;
+    .small-button {
+      padding: 9px 13px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 800;
     }
 
-    .call-btn {
-      background: #111827;
+    .small-dark {
+      background: #101827;
       color: white;
     }
 
-    .whatsapp-btn {
-      background: #25d366;
+    .small-green {
+      background: #20c965;
       color: white;
     }
 
-    .how-it-works {
+    /* ================= HOW IT WORKS ================= */
+
+    .how {
       background: white;
     }
 
     .steps {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-      );
-      gap: 20px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
     .step {
@@ -256,87 +273,97 @@
       padding: 30px 20px;
     }
 
-    .step-number {
-      width: 55px;
-      height: 55px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: #111827;
+    .number {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 18px;
+      background: #101827;
       color: white;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 22px;
+      font-weight: 900;
     }
 
     .step h3 {
+      font-size: 21px;
       margin-bottom: 8px;
     }
 
     .step p {
-      color: #6b7280;
+      color: #697386;
     }
 
+    /* ================= CONTACT ================= */
+
     .contact {
-      background: #111827;
+      background: #101827;
       color: white;
     }
 
     .contact-container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       text-align: center;
     }
 
     .contact-container h2 {
-      font-size: 38px;
+      font-size: 40px;
       margin-bottom: 12px;
     }
 
     .contact-container > p {
       color: #d1d5db;
-      margin-bottom: 35px;
+      font-size: 17px;
+      margin-bottom: 40px;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-      );
-      gap: 15px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
       margin-bottom: 35px;
     }
 
-    .contact-box {
-      background: #1f2937;
-      padding: 25px;
-      border-radius: 14px;
+    .contact-card {
+      background: #1d2939;
+      padding: 28px 20px;
+      border-radius: 15px;
     }
 
-    .contact-box .icon {
-      font-size: 30px;
+    .contact-icon {
+      font-size: 34px;
       margin-bottom: 8px;
     }
 
-    .contact-box p {
-      color: #d1d5db;
-      margin-top: 5px;
+    .contact-card h3 {
+      margin-bottom: 5px;
     }
 
-    footer {
-      background: #030712;
-      color: #9ca3af;
-      text-align: center;
-      padding: 25px;
+    .contact-card p {
+      color: #d1d5db;
     }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #050a12;
+      color: #aeb5c0;
+      text-align: center;
+      padding: 27px 15px;
+      font-size: 14px;
+    }
+
+    /* ================= MOBILE ================= */
 
     @media (max-width: 700px) {
 
       header {
         flex-direction: column;
-        gap: 15px;
+        gap: 14px;
       }
 
       nav {
@@ -350,21 +377,24 @@
       }
 
       .hero {
-        min-height: 520px;
-        padding: 60px 6%;
+        min-height: 560px;
+        padding: 65px 6%;
       }
 
       section {
-        padding: 60px 5%;
+        padding: 65px 5%;
       }
 
       .buttons {
         flex-direction: column;
       }
 
-      .btn {
-        text-align: center;
+      .button {
         width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 48px;
       }
     }
   </style>
@@ -372,62 +402,71 @@
 
 <body>
 
-<!-- ================= હેડર ================= -->
+<!-- ================= ઉપરનું મેનુ ================= -->
 
 <header>
 
   <div class="logo">
-    KK Enterprise
+    કે.કે. એન્ટરપ્રાઇઝ
   </div>
 
   <nav>
-    <a href="#home">હોમ</a>
+
+    <a href="#home">મુખ્ય પાનું</a>
+
     <a href="#services">સેવાઓ</a>
+
     <a href="#how">કેવી રીતે કામ કરે છે</a>
+
     <a href="#contact">સંપર્ક</a>
+
   </nav>
 
 </header>
 
 
-<!-- ================= હોમ ================= -->
+<!-- ================= મુખ્ય પાનું ================= -->
 
 <section class="hero" id="home">
 
   <div class="hero-content">
 
-    <h1>KK Enterprise</h1>
+    <h1>
+      કે.કે. એન્ટરપ્રાઇઝ
+    </h1>
 
-    <h2>ગુણવત્તા • સેવા • વિશ્વાસ</h2>
+    <h2>
+      ગુણવત્તા • સેવા • વિશ્વાસ
+    </h2>
 
     <p>
-      KK Enterprise માં આપનું સ્વાગત છે.
-      અમારી વિવિધ સેવાઓ જુઓ અને સેવા વિશે માહિતી
-      મેળવવા અથવા બુક કરવા માટે સીધો સંપર્ક કરો.
+      કે.કે. એન્ટરપ્રાઇઝમાં આપનું હાર્દિક સ્વાગત છે.
+      અમારી વિવિધ સેવાઓ વિશે માહિતી મેળવો અને
+      સેવા બુક કરવા માટે અમારો સીધો સંપર્ક કરો.
     </p>
 
     <div class="buttons">
 
       <a
-        class="btn btn-primary"
+        class="button dark-button"
         href="tel:+919427582888"
       >
-        📞 બુક કરવા ફોન કરો
+        📞 બુકિંગ માટે ફોન કરો
       </a>
 
       <a
-        class="btn btn-whatsapp"
-        href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20સેવા%20બુક%20કરવી%20છે."
+        class="button green-button"
+        href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20સેવા%20બુક%20કરવી%20છે."
         target="_blank"
       >
-        💬 WhatsApp પર બુક કરો
+        💬 વોટ્સએપ દ્વારા સંપર્ક કરો
       </a>
 
       <a
-        class="btn btn-primary"
+        class="button dark-button"
         href="#services"
       >
-        બધી સેવાઓ જુઓ
+        અમારી સેવાઓ જુઓ
       </a>
 
     </div>
@@ -441,61 +480,65 @@
 
 <section id="services">
 
-  <div class="section-title">
+  <div class="section-heading">
 
-    <h2>અમારી બધી સેવાઓ</h2>
+    <h2>
+      અમારી સેવાઓ
+    </h2>
 
     <p>
-      તમને જોઈતી સેવા શોધો અને બુક કરવા માટે KK Enterprise નો સંપર્ક કરો.
+      તમારી જરૂરિયાત મુજબની સેવા શોધો અને બુકિંગ માટે અમારો સંપર્ક કરો.
     </p>
 
   </div>
 
 
-  <!-- શોધ -->
-
-  <div class="service-search">
+  <div class="search-area">
 
     <input
       type="text"
       id="serviceSearch"
-      placeholder="🔎 સેવા શોધો..."
+      placeholder="🔎 અહીં સેવા શોધો..."
       onkeyup="searchServices()"
     >
 
   </div>
 
 
-  <!-- સેવા કાર્ડ -->
-
-  <div class="service-grid">
+  <div class="services-grid">
 
 
-    <div class="service-card">
+    <!-- સેવા ૧ -->
 
-      <div class="service-icon">🛠️</div>
+    <div class="service">
 
-      <h3>વ્યવસાયિક સેવાઓ</h3>
+      <div class="service-icon">
+        🛠️
+      </div>
+
+      <h3>
+        વ્યવસાયિક સેવાઓ
+      </h3>
 
       <p>
-        KK Enterprise દ્વારા આપવામાં આવતી વ્યવસાયિક સેવાઓ.
+        વ્યવસાય સંબંધિત વિવિધ સેવાઓ અને સહાય.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 બુક કરવા ફોન કરો
+          📞 બુક કરો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20વ્યવસાયિક%20સેવા%20બુક%20કરવી%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20વ્યવસાયિક%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -503,31 +546,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૨ -->
 
-      <div class="service-icon">🔧</div>
+    <div class="service">
 
-      <h3>ટેકનિકલ સેવાઓ</h3>
+      <div class="service-icon">
+        🔧
+      </div>
+
+      <h3>
+        તકનીકી સેવાઓ
+      </h3>
 
       <p>
-        ટેકનિકલ સેવા અને ગ્રાહક સહાય.
+        તકનીકી કામ અને સંબંધિત સહાય માટેની સેવાઓ.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 બુક કરવા ફોન કરો
+          📞 બુક કરો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20ટેકનિકલ%20સેવા%20બુક%20કરવી%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20તકનીકી%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -535,31 +584,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૩ -->
 
-      <div class="service-icon">📋</div>
+    <div class="service">
 
-      <h3>વ્યાવસાયિક સહાય</h3>
+      <div class="service-icon">
+        📋
+      </div>
+
+      <h3>
+        વ્યાવસાયિક સહાય
+      </h3>
 
       <p>
-        તમારી જરૂરિયાત મુજબ વ્યાવસાયિક સહાય.
+        તમારી જરૂરિયાત પ્રમાણે માર્ગદર્શન અને સહાય.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 બુક કરવા ફોન કરો
+          📞 બુક કરો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20વ્યાવસાયિક%20સહાય%20જોઈએ%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20વ્યાવસાયિક%20સહાય%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -567,31 +622,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૪ -->
 
-      <div class="service-icon">🤝</div>
+    <div class="service">
 
-      <h3>ગ્રાહક સેવા</h3>
+      <div class="service-icon">
+        🤝
+      </div>
+
+      <h3>
+        ગ્રાહક સેવા
+      </h3>
 
       <p>
-        ગ્રાહકો માટે સહાય અને માર્ગદર્શન.
+        ગ્રાહકો માટે સહાય, માહિતી અને માર્ગદર્શન.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
           📞 સંપર્ક કરો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20ગ્રાહક%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20ગ્રાહક%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -599,31 +660,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૫ -->
 
-      <div class="service-icon">🚚</div>
+    <div class="service">
 
-      <h3>ડિલિવરી સેવા</h3>
+      <div class="service-icon">
+        🚚
+      </div>
+
+      <h3>
+        પહોંચાડવાની સેવા
+      </h3>
 
       <p>
-        ઉપલબ્ધ હોય ત્યાં ડિલિવરી સંબંધિત સહાય.
+        ઉપલબ્ધ હોય ત્યાં પહોંચાડવા સંબંધિત સેવા અને સહાય.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 માહિતી માટે ફોન કરો
+          📞 માહિતી મેળવો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20ડિલિવરી%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20પહોંચાડવાની%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -631,31 +698,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૬ -->
 
-      <div class="service-icon">💼</div>
+    <div class="service">
 
-      <h3>એન્ટરપ્રાઇઝ સેવાઓ</h3>
+      <div class="service-icon">
+        💼
+      </div>
+
+      <h3>
+        સંસ્થાકીય સેવાઓ
+      </h3>
 
       <p>
-        વ્યવસાયો અને સંસ્થાઓ માટે સેવાઓ.
+        વ્યવસાયો અને સંસ્થાઓ માટે વિવિધ સેવાઓ.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 બુક કરવા ફોન કરો
+          📞 બુક કરો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20એન્ટરપ્રાઇઝ%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20સંસ્થાકીય%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -663,31 +736,37 @@
     </div>
 
 
-    <div class="service-card">
+    <!-- સેવા ૭ -->
 
-      <div class="service-icon">⭐</div>
+    <div class="service">
 
-      <h3>અન્ય સેવાઓ</h3>
+      <div class="service-icon">
+        ⭐
+      </div>
+
+      <h3>
+        અન્ય સેવાઓ
+      </h3>
 
       <p>
-        તમને જરૂરી અન્ય કોઈ સેવા વિશે અમારો સંપર્ક કરો.
+        તમને જરૂરી અન્ય કોઈ સેવા માટે અમારો સંપર્ક કરો.
       </p>
 
       <div class="service-buttons">
 
         <a
-          class="small-btn call-btn"
+          class="small-button small-dark"
           href="tel:+919427582888"
         >
-          📞 પૂછવા માટે ફોન કરો
+          📞 પૂછો
         </a>
 
         <a
-          class="small-btn whatsapp-btn"
-          href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise%2C%20મારે%20અન્ય%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
+          class="small-button small-green"
+          href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ%2C%20મારે%20અન્ય%20સેવા%20વિશે%20માહિતી%20જોઈએ%20છે."
           target="_blank"
         >
-          WhatsApp
+          વોટ્સએપ
         </a>
 
       </div>
@@ -702,14 +781,16 @@
 
 <!-- ================= કેવી રીતે કામ કરે છે ================= -->
 
-<section class="how-it-works" id="how">
+<section class="how" id="how">
 
-  <div class="section-title">
+  <div class="section-heading">
 
-    <h2>કેવી રીતે કામ કરે છે?</h2>
+    <h2>
+      કેવી રીતે કામ કરે છે?
+    </h2>
 
     <p>
-      સેવા બુક કરવી ખૂબ જ સરળ છે.
+      સેવા બુક કરવાની સરળ પ્રક્રિયા.
     </p>
 
   </div>
@@ -717,14 +798,19 @@
 
   <div class="steps">
 
+
     <div class="step">
 
-      <div class="step-number">1</div>
+      <div class="number">
+        ૧
+      </div>
 
-      <h3>સેવા પસંદ કરો</h3>
+      <h3>
+        સેવા પસંદ કરો
+      </h3>
 
       <p>
-        તમને જોઈતી સેવા શોધો.
+        તમને જોઈતી સેવા પસંદ કરો.
       </p>
 
     </div>
@@ -732,12 +818,16 @@
 
     <div class="step">
 
-      <div class="step-number">2</div>
+      <div class="number">
+        ૨
+      </div>
 
-      <h3>ફોન અથવા WhatsApp કરો</h3>
+      <h3>
+        અમારો સંપર્ક કરો
+      </h3>
 
       <p>
-        KK Enterprise નો સીધો સંપર્ક કરો.
+        ફોન અથવા વોટ્સએપ દ્વારા અમારો સંપર્ક કરો.
       </p>
 
     </div>
@@ -745,15 +835,20 @@
 
     <div class="step">
 
-      <div class="step-number">3</div>
+      <div class="number">
+        ૩
+      </div>
 
-      <h3>બુકિંગની પુષ્ટિ કરો</h3>
+      <h3>
+        બુકિંગ નક્કી કરો
+      </h3>
 
       <p>
-        સેવાની વિગતો વિશે વાત કરો અને બુકિંગની પુષ્ટિ કરો.
+        સેવાની વિગતો વિશે વાત કરો અને બુકિંગ નક્કી કરો.
       </p>
 
     </div>
+
 
   </div>
 
@@ -766,37 +861,46 @@
 
   <div class="contact-container">
 
-    <h2>KK Enterprise નો સંપર્ક કરો</h2>
+    <h2>
+      અમારો સંપર્ક કરો
+    </h2>
 
     <p>
-      કોઈ પ્રશ્ન છે અથવા સેવા બુક કરવી છે?
-      અમારો સીધો સંપર્ક કરો.
+      સેવા વિશે માહિતી મેળવવા અથવા બુકિંગ કરવા માટે અમારો સંપર્ક કરો.
     </p>
 
 
     <div class="contact-grid">
 
 
-      <div class="contact-box">
+      <div class="contact-card">
 
-        <div class="icon">📍</div>
+        <div class="contact-icon">
+          📍
+        </div>
 
-        <strong>સરનામું</strong>
+        <h3>
+          સરનામું
+        </h3>
 
         <p>
-          B3 St,<br>
-          Ankleshwar,<br>
-          Gujarat, India
+          બી-૩ સ્ટ્રીટ,<br>
+          અંકલેશ્વર,<br>
+          ગુજરાત, ભારત
         </p>
 
       </div>
 
 
-      <div class="contact-box">
+      <div class="contact-card">
 
-        <div class="icon">📞</div>
+        <div class="contact-icon">
+          📞
+        </div>
 
-        <strong>ફોન</strong>
+        <h3>
+          ફોન નંબર
+        </h3>
 
         <p>
           +91 9427582888
@@ -805,11 +909,15 @@
       </div>
 
 
-      <div class="contact-box">
+      <div class="contact-card">
 
-        <div class="icon">💬</div>
+        <div class="contact-icon">
+          💬
+        </div>
 
-        <strong>WhatsApp</strong>
+        <h3>
+          વોટ્સએપ
+        </h3>
 
         <p>
           +91 9427582888
@@ -827,18 +935,19 @@
     >
 
       <a
-        class="btn btn-light"
+        class="button"
+        style="background:white;color:#101827;"
         href="tel:+919427582888"
       >
-        📞 KK Enterprise ને ફોન કરો
+        📞 ફોન દ્વારા સંપર્ક કરો
       </a>
 
       <a
-        class="btn btn-whatsapp"
-        href="https://wa.me/919427582888?text=નમસ્તે%20KK%20Enterprise"
+        class="button green-button"
+        href="https://wa.me/919427582888?text=નમસ્તે%20કે.કે.%20એન્ટરપ્રાઇઝ"
         target="_blank"
       >
-        💬 WhatsApp કરો
+        💬 વોટ્સએપ દ્વારા સંપર્ક કરો
       </a>
 
     </div>
@@ -848,39 +957,43 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ================= નીચેનો ભાગ ================= -->
 
 <footer>
 
-  © 2026 KK Enterprise. બધા હકો સુરક્ષિત.
+  © ૨૦૨૬ કે.કે. એન્ટરપ્રાઇઝ — બધા હકો સુરક્ષિત.
 
 </footer>
 
 
-<!-- ================= SEARCH ================= -->
+<!-- ================= સેવા શોધવાનું કાર્ય ================= -->
 
 <script>
 
 function searchServices() {
 
-  const input =
+  const searchBox =
     document.getElementById("serviceSearch");
 
-  const search =
-    input.value.toLowerCase();
+  const searchText =
+    searchBox.value.toLowerCase();
 
-  const cards =
-    document.querySelectorAll(".service-card");
+  const services =
+    document.querySelectorAll(".service");
 
-  cards.forEach(function(card) {
+  services.forEach(function(service) {
 
-    const text =
-      card.innerText.toLowerCase();
+    const serviceText =
+      service.innerText.toLowerCase();
 
-    if (text.includes(search)) {
-      card.style.display = "";
+    if (serviceText.includes(searchText)) {
+
+      service.style.display = "";
+
     } else {
-      card.style.display = "none";
+
+      service.style.display = "none";
+
     }
 
   });
